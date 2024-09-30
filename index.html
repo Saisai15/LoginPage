@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    
+
+    <style>
+        body {
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        .loginPage {
+            background-color: floralwhite;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .loginPage h2 {
+            margin: 0 0 20px;
+            text-align: center;
+        }
+        .loginPage label {
+            display: block;
+            margin-bottom: 8px;
+            width: fit;
+            font-size: 15px;
+        }
+        .loginPage input {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: ghostwhite;
+        }
+        .loginPage button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .loginPage button:active {
+            background-color: powderblue;
+        }
+        .loginPage input:hover{
+            background-color: white;
+
+        }
+    </style>
+</head>
+<body>
+
+
+       
+    </div>
+    
+    <div class="loginPage">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+
+        </form>
+    </div>
+    <script>
+        function Login(){
+            var corUsername = "Cyrine";
+            var corPassword = "Ganloy";
+
+            var typeUsername = document.getElementById("username").value;
+            var typePassword = document.getElementById("password").value;
+
+            if(typeUsername .equals corUsername && typePassword .equals corPassword){
+                document.getElementById("error").innerHTML = "Correct username and password";
+                document.getElementById("error").style.color="red";
+
+                window.location.href="Cal.html";
+                
+
+            }else{
+                document.getElementById("error").innerHTML = "Invalid access! Try again!";
+            typeUsername="";
+            typePassword="";
+            }
+        }
+    </script>
+
+</body>
+</html>
